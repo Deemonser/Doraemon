@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="email">
+        <item>163</item>
+        <item>126</item>
+        <item>qq</item>
+        <item>163</item>
+        <item>sina</item>
+        <item>gmail</item>
+        <item>hotmail</item>
+    </string-array>
+
+
+
+</resources>

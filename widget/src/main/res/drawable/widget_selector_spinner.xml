@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_focused="true">
+        <layer-list>
+            <!-- This is the line -->
+            <!-- left 和right是左右边距 -->
+            <item android:left="1mm"
+                  android:right="1mm">
+                <shape>
+                    <solid android:color="#03318C"/>
+                </shape>
+            </item>
+            <!--bottom是横线高度 -->
+            <item android:bottom="3mm">
+                <shape>
+                    <solid android:color="@android:color/white"/>
+                </shape>
+            </item>
+            <item>
+                <bitmap android:gravity="right"
+                        android:src="@drawable/icon_spinner_arrow_down"/>
+            </item>
+        </layer-list>
+    </item>
+
+    <item>
+        <layer-list>
+            <!-- This is the line -->
+            <!-- left 和right是左右边距 -->
+            <item android:left="1mm"
+                  android:right="1mm">
+                <shape>
+                    <solid android:color="#E6E6E6"/>
+                </shape>
+            </item>
+            <!--bottom是横线高度 -->
+            <item android:bottom="3mm">
+                <shape>
+                    <solid android:color="@android:color/white"/>
+                </shape>
+            </item>
+            <item>
+                <bitmap android:gravity="right"
+                        android:src="@drawable/icon_spinner_arrow_down"/>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <view class="com.deemo.widget.input.VerifyCodeInputView$PasteEditText"
+        android:id="@+id/widget_input_code_1"
+        android:layout_width="102mm"
+        android:layout_height="96mm"
+        android:background="@drawable/widget_input_verify_edit_bg"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="4"
+        android:nextFocusForward="@id/widget_input_code_2"
+        android:textColor="#333333"
+        android:textCursorDrawable="@drawable/widget_shape_cursor_color"
+        android:textSize="48mm" />
+
+    <EditText
+        android:id="@+id/widget_input_code_2"
+        android:layout_width="102mm"
+        android:layout_height="96mm"
+        android:layout_marginLeft="24mm"
+        android:background="@drawable/widget_input_verify_edit_bg"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:nextFocusForward="@id/widget_input_code_3"
+        android:textColor="#333333"
+        android:textCursorDrawable="@drawable/widget_shape_cursor_color"
+        android:textSize="48mm" />
+
+    <EditText
+        android:id="@+id/widget_input_code_3"
+        android:layout_width="102mm"
+        android:layout_height="96mm"
+        android:layout_marginLeft="24mm"
+        android:background="@drawable/widget_input_verify_edit_bg"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:nextFocusForward="@id/widget_input_code_4"
+        android:textColor="#333333"
+        android:textCursorDrawable="@drawable/widget_shape_cursor_color"
+        android:textSize="48mm" />
+
+    <EditText
+        android:id="@+id/widget_input_code_4"
+        android:layout_width="102mm"
+        android:layout_height="96mm"
+        android:layout_marginLeft="24mm"
+        android:background="@drawable/widget_input_verify_edit_bg"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:nextFocusForward="@id/widget_input_code_5"
+        android:textColor="#333333"
+        android:textCursorDrawable="@drawable/widget_shape_cursor_color"
+        android:textSize="48mm" />
+
+
+    <EditText
+        android:id="@+id/widget_input_code_5"
+        android:layout_width="102mm"
+        android:layout_height="96mm"
+        android:layout_marginLeft="24mm"
+        android:background="@drawable/widget_input_verify_edit_bg"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:nextFocusForward="@id/widget_input_code_6"
+        android:textColor="#333333"
+        android:textCursorDrawable="@drawable/widget_shape_cursor_color"
+        android:textSize="48mm" />
+
+
+    <EditText
+        android:id="@+id/widget_input_code_6"
+        android:layout_width="102mm"
+        android:layout_height="96mm"
+        android:layout_marginLeft="24mm"
+        android:background="@drawable/widget_input_verify_edit_bg"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textColor="#333333"
+        android:textCursorDrawable="@drawable/widget_shape_cursor_color"
+        android:textSize="48mm" />
+
+
+</LinearLayout>

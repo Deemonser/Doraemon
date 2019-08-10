@@ -1,0 +1,148 @@
+ext {
+    signingConfig = [storePassword: "xxx",
+                     keyAlias     : "xxx",
+                     keyPassword  : "xxx"]
+
+    android = [compileSdkVersion: 29,
+               buildToolsVersion: "29.0.0",
+               minSdkVersion    : 19,
+               targetSdkVersion : 29,
+               versionCode      : 1,
+               versionName      : "1.0.0",
+               javaVersion      : JavaVersion.VERSION_1_8]
+
+    abiFilter = " 'armeabi'" + ", 'x86'"
+    //            ",'armeabi-v7a'" +
+    //            ", 'arm64-v8a'" +
+    //            ", 'x86_64'"
+
+    depsVersion = [support              : "29.0.0",
+                   retrofitSdkVersion   : '2.6.0',
+                   dagger2SdkVersion    : "2.15",
+
+                   rxJavaSdkVersion     : "2.2.8",
+                   rxAndroidSdkVersion  : "2.1.1",
+                   rxlifecycleSdkVersion: "2.2.1",
+                   rxbindingSdkVersion  : "2.0.0",
+
+                   espressoSdkVersion   : "3.0.1"]
+
+    deps = [// ------------- Android -------------
+            supportV4                     : "androidx.legacy:legacy-support-v4:1.0.0",
+            appcompat                     : "androidx.appcompat:appcompat:1.0.2",
+            cardview                      : "androidx.cardview:cardview:1.0.0",
+            recyclerview                  : "androidx.recyclerview:recyclerview:1.0.0",
+            design                        : "com.google.android.material:material:1.0.0-rc01",
+            supportAnnotations            : "androidx.annotation:annotation:1.0.0",
+            constraintLayout              : 'androidx.constraintlayout:constraintlayout:1.1.3',
+//            dataBinding                   : "com.android.databinding:compiler:$gradle_version",
+
+            // ------------- view -------------
+            qmui                          : "com.qmuiteam:qmui:1.1.3",
+            autoSize                      : "me.jessyan:autosize:1.1.2",
+            pageStateManager              : 'com.github.hss01248:PageStateManager:1.0.3',
+            ultraPtr                      : 'in.srain.cube:ultra-ptr:1.0.11',
+            materialDialogs               : 'com.afollestad.material-dialogs:commons:0.9.4.2',
+            banner                        : 'com.xhb:xbanner:1.2.7',
+            jsbridge                      : 'com.github.lzyzsd:jsbridge:1.0.4',
+            indicator                     : 'com.github.hackware1993:MagicIndicator:1.5.0',
+            pickerview                    : "com.bigkoo:pickerview:2.0.8",
+            photoView                     : "com.github.chrisbanes.photoview:library:1.2.3",
+            paginate                      : "com.github.markomilos:paginate:0.5.1",
+            numberprogressbar             : "com.daimajia.numberprogressbar:library:1.2@aar",
+            vLayout                       : 'com.alibaba.android:vlayout:1.0.5@aar',
+            pdfView                       : 'com.github.barteksc:android-pdf-viewer:2.4.0',
+            nineoldandroids               : "com.nineoldandroids:library:2.4.0",
+            calligraphy                   : "uk.co.chrisjenx:calligraphy:2.3.0",                        //字体
+            superTextView                 : 'com.github.lygttpod:SuperTextView:2.1.5',
+            textView                      : "com.github.chenBingX:SuperTextView:v1.4",
+            blurringview                  : "com.fivehundredpx:blurringview:1.0.0",
+            marquee                       : "com.gongwen:marqueelibrary:1.1.3",
+            easyPopup                     : 'com.github.zyyoona7:EasyPopup:1.0.2',
+            pickers                       : 'com.github.addappcn:android-pickers:1.0.1',
+            CircularAnim                  : 'com.github.XunMengWinter:CircularAnim:0.4.1',
+
+            // ------------- tools -------------
+            utils                         : 'com.blankj:utilcodex:1.24.7',
+            statusBarlibrary              : 'com.gyf.immersionbar:immersionbar:2.3.3',                      //状态栏
+            rvAdapterHelper               : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.45-androidx',
+            stickyDecoration              : 'com.oushangfeng:PinnedSectionItemDecoration:1.2.4',
+            rvDivider                     : 'com.yqritc:recyclerview-flexibledivider:1.4.0',
+            fragmentation                 : 'me.yokeyword:fragmentation:1.1.9',
+            crash                         : 'com.deemons.crash:crash:1.0.0',
+            aRouter                       : 'com.alibaba:arouter-api:1.5.0',
+            aRouterApt                    : 'com.alibaba:arouter-compiler:1.2.2',
+            threetenabp                   : 'com.jakewharton.threetenabp:threetenabp:1.2.1',
+            permissionsDispatcher         : 'org.permissionsdispatcher:permissionsdispatcher:4.5.0',
+            permissionsDispatcherApt      : 'org.permissionsdispatcher:permissionsdispatcher-processor:4.5.0',
+
+            // ------------- other --------------
+            annotation                    : 'javax.annotation:jsr250-api:1.0',
+            multidex                      : 'androidx.multidex:multidex:2.0.1',
+            gson                          : "com.google.code.gson:gson:2.8.5",
+            ddcomponent                   : 'com.luojilab.ddcomponent:componentlib:1.3.0',
+            ddcomponentCompiler           : 'com.luojilab.ddcomponent:router-anno-compiler:1.0.0',
+
+            // ------------- Rx  -------------
+            rxJava                        : "io.reactivex.rxjava2:rxjava:${depsVersion.rxJavaSdkVersion}",
+            rxAndroid                     : "io.reactivex.rxjava2:rxandroid:${depsVersion.rxAndroidSdkVersion}",
+
+            rxlifecycle                   : "com.trello.rxlifecycle2:rxlifecycle:${depsVersion.rxlifecycleSdkVersion}",
+            rxlifecycleAndroid            : "com.trello.rxlifecycle2:rxlifecycle-android:${depsVersion.rxlifecycleSdkVersion}",
+            rxlifecycleComponents         : "com.trello.rxlifecycle2:rxlifecycle-components:${depsVersion.rxlifecycleSdkVersion}",
+            autodispose                   : "com.uber.autodispose:autodispose:1.3.0",
+            autodisposeArchcomponents     : "com.uber.autodispose:autodispose-android-archcomponents:1.3.0",
+
+
+            // ------------- net -------------
+            retrofit                      : "com.squareup.retrofit2:retrofit:${depsVersion.retrofitSdkVersion}",
+            retrofitConverterGson         : "com.squareup.retrofit2:converter-gson:${depsVersion.retrofitSdkVersion}",
+            retrofitConverterProtobuf     : "com.squareup.retrofit2:converter-protobuf:${depsVersion.retrofitSdkVersion}",
+            retrofitAdapterRxjava         : "com.squareup.retrofit2:adapter-rxjava2:${depsVersion.retrofitSdkVersion}",
+            retrofitConverterScalars      : "com.squareup.retrofit2:converter-scalars:${depsVersion.retrofitSdkVersion}",
+            okhttpUrlconnection           : "com.squareup.okhttp:okhttp-urlconnection:2.0.0",
+            okhttp3                       : "com.squareup.okhttp3:okhttp:3.10.0",
+            logInterceptor                : 'com.squareup.okhttp3:logging-interceptor:3.10.0',
+            rxcache                       : 'com.github.VictorAlbertos.RxCache:runtime:1.8.0-2.x',
+            rxcacheJolyglotGson           : 'com.github.VictorAlbertos.Jolyglot:gson:0.0.3',
+
+            // ------------- inject -------------
+            dagger2                       : "com.google.dagger:dagger:${depsVersion.dagger2SdkVersion}",
+            dagger2AptCompiler            : "com.google.dagger:dagger-compiler:${depsVersion.dagger2SdkVersion}",
+            dagger2android                : "com.google.dagger:dagger-android:${depsVersion.dagger2SdkVersion}",
+            dagger2androidSupport         : "com.google.dagger:dagger-android-support:${depsVersion.dagger2SdkVersion}",
+            dagger2androidProcessor       : "com.google.dagger:dagger-android-processor:${depsVersion.dagger2SdkVersion}",
+
+            // ------------- img -------------
+            glide                         : "com.github.bumptech.glide:glide:4.9.0",
+            glideCompiler                 : "com.github.bumptech.glide:compiler:4.9.0",
+            glideTransform                : "jp.wasabeef:glide-transformations:4.0.1",
+
+            // ------------- event -------------
+            eventbus                      : "org.greenrobot:eventbus:3.1.1",
+
+            // ------------- sdk ---------------
+            umengAnalytics                : "com.umeng.analytics:analytics:6.0.1",
+
+            // ------------- test  -------------
+            junit                         : 'junit:junit:4.12',
+            truth                         : 'com.google.truth:truth:0.29',
+            robolectric                   : 'org.robolectric:robolectric:3.1.2',
+            runner                        : 'com.android.support.test:runner:1.0.1',
+            espressoCore                  : "com.android.support.test.espresso:espresso-core:${depsVersion.espressoSdkVersion}",
+            espressoContrib               : ("com.android.support.test.espresso:espresso-contrib:${depsVersion.espressoSdkVersion}"),
+            espressoIntents               : "com.android.support.test.espresso:espresso-intents:${depsVersion.espressoSdkVersion}",
+            mockitoCore                   : "org.mockito:mockito-core:1.+",
+            androidJUnitRunner            : "android.support.test.runner.AndroidJUnitRunner",
+
+            // ------------- debug ----------------
+            timber                        : "com.jakewharton.timber:timber:4.5.1",
+            logger                        : 'com.orhanobut:logger:1.15',
+            hugo                          : 'com.jakewharton.hugo:hugo-plugin:1.2.1',
+            canaryDebug                   : "com.squareup.leakcanary:leakcanary-android:1.4-beta2",
+            canaryRelease                 : "com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2",
+            leakcanaryAndroid             : 'com.squareup.leakcanary:leakcanary-android:1.5',
+            leakcanaryAndroidNoOp         : 'com.squareup.leakcanary:leakcanary-android-no-op:1.5',
+
+    ]
+}
