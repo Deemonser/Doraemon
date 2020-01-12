@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+
+    <declare-styleable name="ToolBar">
+        <attr name="toolbar_style" format="enum">
+            <enum name="blue" value="100" />
+            <enum name="blue_question" value="110" />
+            <enum name="transparent" value="200" />
+        </attr>
+        <attr name="title" format="string" />
+    </declare-styleable>
+
+
+
+</resources>

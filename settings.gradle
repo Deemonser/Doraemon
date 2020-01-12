@@ -1,1 +1,1 @@
-include ':app', ':basislib', ':widget'
+include ':app', ':baselib', ':server'

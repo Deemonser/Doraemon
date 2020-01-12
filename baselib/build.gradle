@@ -1,0 +1,106 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+
+    buildTypes {
+
+    }
+
+
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    //support
+    api rootProject.ext.deps.appcompat
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api 'androidx.core:core-ktx:1.1.0'
+
+    //view
+    api rootProject.ext.deps.constraintLayout
+    api rootProject.ext.deps.recyclerview
+    api rootProject.ext.deps.design
+    api rootProject.ext.deps.indicator
+    api rootProject.ext.deps.SwipeRefreshLayout
+    api rootProject.ext.deps.SwipeRefreshHeader
+//    api rootProject.ext.deps.ImageSelector
+//    api rootProject.ext.deps.ImageWatcher
+//
+    // tools
+    api rootProject.ext.deps.utils
+    api rootProject.ext.deps.threetenabp
+    api rootProject.ext.deps.gson
+    api rootProject.ext.deps.autoSize
+    api rootProject.ext.deps.statusBarlibrary
+
+    //glide
+    api rootProject.ext.deps.glide
+    kapt rootProject.ext.deps.glideCompiler
+//    api rootProject.ext.deps.glideTransform
+
+    //ARouter
+    api rootProject.ext.deps.aRouter
+    kapt rootProject.ext.deps.aRouterApt
+
+    //dagger2
+    api rootProject.ext.deps.dagger2
+    kapt rootProject.ext.deps.dagger2AptCompiler
+
+    //permissions
+    api rootProject.ext.deps.permissionsDispatcher
+    kapt rootProject.ext.deps.permissionsDispatcherApt
+
+    // rx
+    api rootProject.ext.deps.rxJava
+    api rootProject.ext.deps.rxAndroid
+
+    //network
+    api rootProject.ext.deps.retrofit
+    api rootProject.ext.deps.retrofitConverterGson
+    api rootProject.ext.deps.retrofitAdapterRxjava
+    api rootProject.ext.deps.retrofitConverterScalars
+    api rootProject.ext.deps.logInterceptor
+
+    //autoDispose
+    api rootProject.ext.deps.autodispose
+    api rootProject.ext.deps.autodisposeArchcomponents
+
+    //other
+    api rootProject.ext.deps.rvAdapterHelper
+}

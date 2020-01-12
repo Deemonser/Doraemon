@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="DefAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:windowAnimationStyle">@style/ActivityAnim</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="radioButtonStyle">@style/DefRadioButtonStyle</item>
+        <item name="editTextStyle">@style/DefEditTextStyle</item>
+        <item name="buttonStyle">@style/DefButtonStyle</item>
+
+    </style>
+
+    <style name="SplashTheme" parent="DefAppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/start_window</item>
+    </style>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--左右滑入 滑出, 原界面联动 -->
+    <style name="ActivityAnim">
+        <item name="android:activityOpenEnterAnimation">@anim/push_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/push_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/push_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/push_out_right</item>
+    </style>
+
+
+    <!-- 左右滑入 滑出，原界面不动-->
+
+
+    <!-- 淡入淡出 ，原界面不动-->
+
+
+</resources>
